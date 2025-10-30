@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Anísio Munda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <script>
+        // Fallback defensivo: define funções mínimas caso js/main.js não carregue a tempo
+        if (typeof window.toggleMenu !== 'function') {
+            window.toggleMenu = function () { /* noop until main.js loads */ };
+        }
+        if (typeof window.closeMenu !== 'function') {
+            window.closeMenu = function () { /* noop until main.js loads */ };
+        }
+    </script>
+    <!-- Navegação -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- ícone de desenvolvedor (monitor com código) -->
+                <i class="fa-solid fa-user-tie" style="font-size: 30px;"></i>
+                <div class="brand">
+                    A<span style="color: var(--accent)">n</span>isio <span style="color: var(--primary)">M</span>unda
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home"> <i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="#about"> <i class="fa-solid fa-address-card"></i> Sobre</a></li>
+                <li><a href="#skills"> <i class="fa-solid fa-laptop"></i> Habilidades</a></li>
+                <li><a href="#experience"> <i class="fa-solid fa-user-tie"></i> Experiência</a></li>
+                <li><a href="#contact"> <i class="fa-solid fa-address-book"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Desenvolvedor Fullstack <i class="fa-solid fa-code"></i></h1>
+                <p class="subtitle">Desenvolvedor Full Stack & Mobile | Engenheiro de Software</p>
+                <p>Especialista em construir soluções completas do zero, com expertise em SpringBoot, Laravel, Angular e
+                    Flutter. Transformo ideias em aplicações escaláveis e performáticas.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"> <i class="fa-solid fa-diagram-project"></i> Ver Projetos</a>
+                    <a href="meu_cv.html" class="btn btn-secondary"> <i class="fa-solid fa-file-pdf"></i> Meu Curriculum</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-img">
+                    <img src="assets/img/my_profile.png" alt="">
+                </div>
+            </div>
+            <!-- Hero bubbles animation removed per user request -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="about">
+        <div class="container">
+            <div class="about-content about-grid">
+                <div class="about-card about-presenter">
+                    <div class="about-left">
+                        <div class="avatar-wrapper large">
+                            <img src="assets/img/my_profile.png" alt="Anisio Munda">
+                        </div>
+                        <div class="social-quick" style="font-size: 30px;">
+                            <a href="https://www.linkedin.com/in/an%C3%ADsio-munda-226b00148/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <h2 class="section-title" style="text-align: left;"> <i class="fa-solid fa-address-card"></i> Sobre Mim</h2>
+                        <h3 class="intro">Olá — eu sou Anisio, Desenvolvedor Full Stack & Mobile | Engenheiro de Software</h3>
+                        <p class="lead">Construo aplicações web e mobile com foco em performance, manutenção e experiência do usuário. Tenho atuado com Java, Spring Boot, PHP/Laravel, Angular e Flutter.</p>
+
+                        <div class="highlights">
+                            <span class="badge">Mobile Developer</span>
+                            <span class="badge">Web Developer</span>
+                            <span class="badge">APIs REST</span>
+                            <span class="badge">Microservices</span>
+                            <span class="badge">CI / CD</span>
+                            <span class="badge">Testes Automatizados</span>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="num">6+</div>
+                                <div class="label">Anos experiência</div>
+                            </div>
+                            <div class="stat">
+                                <div class="num">30+</div>
+                                <div class="label">Projetos</div>
+                            </div>
+                            <div class="stat">
+                                <div class="num">10+</div>
+                                <div class="label">Tecnologias</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+        <h2 class="section-title"> <i class="fa-solid fa-laptop"></i> Teconlogias & Habilidades</h2><hr>
+        <section class="skills-carousel-section" aria-label="Carrossel de Habilidades">
+            <div class="carousel-container">
+                <button class="carousel-nav prev" aria-label="Anterior">◀</button>
+                <div class="skills-carousel">
+                    <div class="carousel-track">
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/spring_logo.png" alt="Spring Boot logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Java / Spring Boot</h3>
+                                <ul class="skill-list">
+                                    <li>API´s REST</li>
+                                    <li>Micro Services</li>
+                                    <li>Spring Data & JPA</li>
+                                    <li>Security</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">95%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                 <img src="assets/img/php-logo.svg" alt="Php logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Laravel / PHP</h3>
+                                <ul class="skill-list">
+                                    <li>Sistemas web</li>
+                                    <li>Eloquent ORM</li>
+                                    <li>Middlewares & Routing</li>
+                                    <li>Testes unitários</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">90%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/angular-logo.jfif" alt="Angular logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Angular / TypeScript</h3>
+                                <ul class="skill-list">
+                                    <li>SPAs</li>
+                                    <li>Componentes</li>
+                                    <li>RxJS e Reatividade</li>
+                                    <li>State Management</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">93%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/flutter-logo.png" alt="Flutter logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Flutter / Dart</h3>
+                                <ul class="skill-list">
+                                    <li>Cross-Plataform</li>
+                                    <li>Widgets</li>
+                                    <li>Testes e integração</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">87%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/docker-logo.svg" alt="Docker logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Docker</h3>
+                                <ul class="skill-list">
+                                    <li>Containers e imagens</li>
+                                    <li>Docker Compose</li>
+                                    <li>Pipelines CI/CD</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">85%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/sql-logo.webp" alt="Sql logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>SQL</h3>
+                                <ul class="skill-list">
+                                    <li>Modelagem de dados</li>
+                                    <li>Stored Procedures</li>
+                                    <li>Queries</li>
+                                    <li>Indexação</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">91%</span></div>
+                            </div>
+                        </article>
+                        <article class="skill-card">
+                            <div class="skill-icon">
+                                <img src="assets/img/git-logo.webp" alt="Git logo">
+                            </div>
+                            <div class="skill-card-body">
+                                <h3>Git & CI/CD</h3>
+                                <ul class="skill-list">
+                                    <li>Automação de deploy</li>
+                                    <li>Fluxos Git (feature/PR)</li>
+                                    <li>CI pipelines</li>
+                                </ul>
+                                <div class="skill-bubble"><span class="skill-percent">93%</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-nav next" aria-label="Próximo">▶</button>
+            </div>
+        </section>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h2 class="section-title"> <i class="fa-solid fa-diagram-project"></i> Projetos em Destaque</h2>
+                <div class="projects-controls">
+                    <div class="projects-count">3 projetos</div>
+                    <div class="projects-filters" role="tablist" aria-label="Filtrar projetos por tecnologia">
+                        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                        <button class="filter-btn" data-filter="spring" role="tab">Spring</button>
+                        <button class="filter-btn" data-filter="laravel" role="tab">Laravel</button>
+                        <button class="filter-btn" data-filter="angular" role="tab">Angular</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid" aria-live="polite">
+                <article class="project-card" data-tags="spring,angular" tabindex="0">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/img/game_racing_project.png" alt="HospSys dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Racing Game <span class="project-year">2025</span></h3>
+                        <div class="project-meta">Role: Javascript / Game Logic</div>
+                        <p class="project-desc">Jogo de corrida de carro desenvolvido com Javascript</p>
+                        <div class="tech-tags">
+                            <span>Html</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                            <span>Canvas</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="btn btn-secondary" href="projects/racing_game.html" target="_blank" rel="noopener">Play Game</a>
+                            <!-- <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Ver Repositório</a> -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tags="laravel,flutter" tabindex="0">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/img/snake_game.png" alt="HospSys dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Snake Game <span class="project-year">2025</span></h3>
+                        <div class="project-meta">Role: Javascript / Game Logic</div>
+                        <p class="project-desc">Recriação do jogo clássico da cobrinha</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                            <span>Canvas</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="btn btn-secondary" href="projects/snake_game.html" target="_blank" rel="noopener">Play Game</a>
+                            <!-- <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Repositório</a> -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tags="java,angular" tabindex="0">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/img/projects.png" alt="HospSys dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Projecto em Desenvolvimento <span class="project-year">2025</span></h3>
+                        <div class="project-meta">Role: In development</div>
+                        <p class="project-desc">Projecto em desenvolvimento</p>
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>Angular</span>
+                            <span>Docker</span>
+                            <span>JavaScript</span>
+                            <span>Php</span>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="btn btn-secondary" href="#" target="_blank" rel="noopener">Ver Demo</a>
+                            <!-- <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Repo</a>-->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiência Profissional</h2>
+            <p class="section-subtitle"></p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date"> <img src="assets/img/jupiter_logo.jfif" alt="" class="time-content-logo"> Jupiter Systems & Solutions - 2021</span>
+                        <h3>DESENVOLVEDOR FULL-STACK</h3>
+                        <h4>Desenvolvedor Fullstack</h4>
+                        <p>Desenvolvimento de sistemas web e mobile.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date"> <img src="assets/img/jupiter_logo.jfif" alt="" class="time-content-logo"> Jupiter Systems & Solutions - 2021</span>
+                        <h3>ENGENHEIRO DE DADOS</h3>
+                        <h4>Engenheiro de dados</h4>
+                        <p>APIs REST, BI</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date"> <img src="assets/img/jupiter_logo.jfif" alt="" class="time-content-logo"> Jupiter Systems & Solutions - 2021</span>
+                        <h3>DESENVOLVEDOR WEB ESTAGIÁRIO</h3>
+                        <h4>Estágiário em desenvolvimento web</h4>
+                        <p>Processos de desenvolvimento web & Devops</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date"> <img src="assets/img/idn_logo.jfif" alt="" class="time-content-logo"> IDN PRO - 2021</span>
+                        <h3>DESENVOLVEDOR WEB FULL-STACK</h3>
+                        <h4>Html, Css, JavaScript, Laravel & Php</h4>
+                        <p>E-commerce, aplicativos mobile, implementação de sistemas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2 class="section-title">Contato</h2>
+                <p class="section-subtitle">Vamos trabalhar juntos?</p>
+                <p>Fale comigo para discutirmos o seu projeto, uma parceria ou qualquer ideia que queira tirar do papel.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/an%C3%ADsio-munda-226b00148/" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" title="GitHub" class="social-link"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" title="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anísio Munda - Desenvolvedor Full Stack & Mobile | Engenheiro de Software . Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
